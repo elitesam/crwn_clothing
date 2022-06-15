@@ -7,7 +7,7 @@ exports.handler = async(event) => {
 
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
-      currency: "inr",
+      currency: "inr", //changed to inr from usd
       payment_method_types: ["card"]
     });
 
