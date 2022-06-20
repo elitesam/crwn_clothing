@@ -1,5 +1,5 @@
-import { Fragment, useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Fragment } from "react";
+import { Outlet } from "react-router-dom";
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -18,7 +18,6 @@ import {
   NavigationContainer,
   NavLinks,
   NavLink,
-  LogoContainer
 } from './navigation.styles';
 
 const Navigation = () => {
