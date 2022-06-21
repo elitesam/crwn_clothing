@@ -4,9 +4,10 @@ import { selectCartItems } from '../../store/cart/cart.selector';
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from '../../store/cart/cart.action';
 
 import './checkout-item.styles.scss';
+import { memo } from 'react';
 
 
-const CheckoutItem = ({ cartItem }) => {
+const CheckoutItem = memo(({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
@@ -35,6 +36,6 @@ const CheckoutItem = ({ cartItem }) => {
     </div>
   )
 
-}
+});
 
 export default CheckoutItem;
